@@ -10,7 +10,8 @@
    <!-- <bean id="car" class="com.uma.spring.SpringPractice.Car"></bean>-->
    
    <bean id="studentBean" class="com.uma.spring.SpringPractice.Student">
-   <property name="name" value="Vishnu Kamala"></property>
+  <!--  <property name="name" value="Vishnu Kamala"></property> --> <!-- setter injection -->
+  <constructor-arg value="Vishu Deva"></constructor-arg><!-- Constructor injection -->
    </bean>
     
     

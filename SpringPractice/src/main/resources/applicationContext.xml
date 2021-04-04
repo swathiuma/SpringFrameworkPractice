@@ -39,6 +39,34 @@
     <ref bean="address"/>
     </constructor-arg>
     </bean>
+    
+    <bean id="ans1" class="com.uma.spring.SpringPractice.ci_using_collections.Answer">
+    <constructor-arg value="1"></constructor-arg>
+    <constructor-arg value="Java is a Programing Language"></constructor-arg>
+    <constructor-arg value="Raju"></constructor-arg>
+    </bean>
+    <bean id="ans2" class="com.uma.spring.SpringPractice.ci_using_collections.Answer">
+    <constructor-arg value="2"></constructor-arg>
+    <constructor-arg value="Java is a platform"></constructor-arg>
+    <constructor-arg value="Sheetal"></constructor-arg>
+    </bean>
+    <bean id="que" class="com.uma.spring.SpringPractice.ci_using_collections.Question">
+    <constructor-arg value="108"></constructor-arg>
+    <constructor-arg value="What is Java?"></constructor-arg>
+    <constructor-arg>
+    <list>
+    <ref bean="ans1"/>
+    <ref bean="ans2"/>
+    </list>
+    </constructor-arg>
+    <!-- <constructor-arg>
+    <list>
+    <value>Java is an programming language</value>
+    <value>It is platform independent</value>
+    <value>It contains OOPS concept</value>
+    </list>
+    </constructor-arg> -->
+    </bean>
    </beans>
    
    

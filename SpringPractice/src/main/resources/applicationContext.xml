@@ -9,11 +9,45 @@
    
    <!-- <bean id="car" class="com.uma.spring.SpringPractice.Car"></bean>-->
    
-   <bean id="studentBean" class="com.uma.spring.SpringPractice.Student">
-  <!--  <property name="name" value="Vishnu Kamala"></property> --> <!-- setter injection -->
-  <constructor-arg value="Vishu Deva"></constructor-arg><!-- Constructor injection -->
-   </bean>
+  <!--  <bean id="studentBean" class="com.uma.spring.SpringPractice.Student">
+   <property name="name" value="Vishnu Kamala"></property> setter injection
+  <constructor-arg value="Vishu Deva"></constructor-arg>Constructor injection
+   </bean> -->
     
     
-    <context:component-scan base-package="com.uma.spring.SpringPractice"></context:component-scan>
+    <!-- <context:component-scan base-package="com.uma.spring.SpringPractice"></context:component-scan> -->
+    
+    <bean id="e1" class="com.uma.spring.SpringPractice.constructorInjection.Employee">
+    <constructor-arg value="24"></constructor-arg>
+    <constructor-arg value="Uma"></constructor-arg>
+    </bean>
+    
+    <bean id="e2" class="com.uma.spring.SpringPractice.constructorInjection.Employee">
+    <constructor-arg value="25"></constructor-arg>
+    <constructor-arg value="Swathi"></constructor-arg>
+    </bean>
+    
+    <bean id="address" class="com.uma.spring.SpringPractice.constructorInjection.Address">
+    <constructor-arg value="Hyderabad"></constructor-arg>
+    <constructor-arg value="Telangana"></constructor-arg>
+    <constructor-arg value="India"></constructor-arg>
+    </bean>
+    <bean id="e3" class="com.uma.spring.SpringPractice.constructorInjection.Employee">
+    <constructor-arg value="24"></constructor-arg>
+    <constructor-arg value="Uma"></constructor-arg>
+    <constructor-arg>
+    <ref bean="address"/>
+    </constructor-arg>
+    </bean>
    </beans>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
